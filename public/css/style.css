@@ -1,0 +1,90 @@
+body {
+    background-image: url(../images/background3.jpg) !important;
+    background-size: cover !important;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    overflow: auto;
+    line-height: 25px;
+    background-color: black;
+}
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+.container-wrapper, .jumbotron, .panel-default {
+    border-radius: 1%;
+    text-shadow: 2px 2px 4px #000000;
+    color: #fff;
+    margin: auto;
+}
+.container-wrapper {
+    width: 96%;
+    max-width: 960px;
+    height: 100%;
+    margin: auto;
+    margin-top: 2% !important;
+    border: 2px solid paleturquoise !important;
+}
+.jumbotron, .panel-default {
+    max-width: 900px;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    margin-top: 2%;
+    height: auto;
+}
+h1, h2, h3, h4 {
+    text-shadow: 2px 2px 4px #000000;
+    color: snow !important;
+    font-family: 'Pacifico', cursive;
+}
+h3 {
+    font-size: 20px !important;
+    text-align: center;
+}
+hr {
+    border-top: 1px solid grey !important;
+}
+a:hover {
+    color: snow !important;
+}
+select, label, input, fieldset{
+    margin: auto;
+    width: 500px !important;
+    text-align: center;
+    display: block;
+}
+select {
+    width: 300px !important;
+}
+select, input {
+    background-color: rgba(0,0,0,.4) !important;
+    color: snow !important;
+    margin-bottom: 1%;
+}
+
+.links {
+    color: paleturquoise !important;
+}
+
+.btn {
+    border-color: snow !important;
+    background-color: rgba(0,0,0,.4) !important;
+}
+
+.btn:hover {
+    background: #000 !important;
+    color: snow !important;
+}
+
+input:focus,select:focus{
+    background: rgba(105, 105, 105, .5);
+    border-color: paleturquoise !important;
+    text-align: center;
+}
+
+select option:hover {
+    background-color: yellow !important;
+    text-align: center;
+}
+

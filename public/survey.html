@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder | Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+    <!-- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        Import materialize.css
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="text-center" style="font-size: 30px;">Survey Questions</h1>
+                        <hr>
+                        <form method="/api/friends" action="post">
+                            <h3 class="text-center">About You</h3>
+                            <fieldset class="form-group">
+                                <label for="name">Name (Required)</label>
+                                <input type="text" class="form-control" placeholder="Kanye West" id="name" name="name" required>
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="photo">Link to Photo Image (Required)</label>
+                                <input type="text" class="form-control" placeholder="http://yourphoto.jpg" id="photo" name="photo" required>
+                            </fieldset>
+                            <hr>
+
+                            <!-- 						<h4><strong>Question 1</strong></h4>
+                                <fieldset class="form-group">
+                                    <label for="q1">I love trying new things.</label>
+                                    <br>
+                                    <div class="col-md-4">
+                                        <select class="form-control" id="question01" name="scores[0]">
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div> -->
+                            <!-- 			  	</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="panel panel-default">
+                                            <div class="text-center" class="panel-body"> -->
+                            <fieldset class="form-group">
+                                <label for="q1"><h3>Question 1</h3>You find it easy to be the first one to initiate conversation
+                                    <select class="form-control" name="scores[0]" id="q1">
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2 (Sort of Disagree)</option>
+                                        <option value="3">3 (No Preference)</option>
+                                        <option value="4">4 (Sort of Agree)</option>
+                                        <option value="5">5 (Strongly Agree)</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+
+                            <label for="q2"><h3>Question 2</h3>I enjoy going out in a big groups
+                                <select class="form-control" name="q2" id="q2">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q3"><h3>Question 3</h3>Do you like pizza!?
+                                <select class="form-control" name="q3" id="q3">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q4"><h3>Question 4</h3>I consider my friends, my family.
+                                <select class="form-control" name="q4" id="q4">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q5"><h3>Question 5</h3>I love to travel and be spontaneous:
+                                <select class="form-control" name="q5" id="q5">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q6"><h3>Question 6</h3>I value a friend that is a straight shooter & doesn't sugar coat anything:
+                                <select class="form-control" name="q6" id="q6">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q7"><h3>Question 7</h3> You find it easier to socialize in a coffee shop, rather than a noisy bar
+                                <select class="form-control" name="q7" id="q7">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q8"><h3>Question 8</h3>I consider my friends, my family
+                                <select class="form-control" name="q8" id="q8">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q9"><h3>Question 9</h3>You would rather stay in & watch a movie with a friend
+                                <select class="form-control" name="q9" id="q9">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <label for="q10"><h3>Question 10</h3>Are you easy going?
+                                <select class="form-control" name="q10" id="q10">
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2 (Sort of Disagree)</option>
+                                    <option value="3">3 (No Preference)</option>
+                                    <option value="4">4 (Sort of Agree)</option>
+                                    <option value="5">5 (Strongly Agree)</option>
+                                </select>
+                            </label>
+                            <br>
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"  style="width: 90%; margin-left: 5%;"><i class="fa fa-check-circle" aria-hidden="true">Submit</i>
+                            </button>
+                    </div>
+                </div>
+            </div> <!-- col end -->
+        </div> <!-- row end -->
+    </div>	<!-- container end -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer">
+                    <p><a class="links" href="/api/friends">API Friends List | </a><a class="links" href="https://github.com/taylorem2787/friend-finder">Github Repo</a></p>
+                    <br>
+                    <br>
+                </div> <!-- end footer -->
+            </div> <!-- col end -->
+        </div> <!-- row end -->
+    </div>
+</div>	<!-- container end -->
+<!-- MODAL======================================================================= -->
+<div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+            <div class="modal-body">
+                <h2 id="matchName"></h2>
+                <img style="max-width: 550px" id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SEND DATA TO SERVER ======================================================= -->
+<script type="text/javascript">
+
+    $('#submit').on('click', function(){
+        var newFriend = {
+            name   : $('#name').val().trim(),
+            photo  : $('#photo').val().trim(),
+            scores : [$('#q1').val(), $('#q2').val(), $('#q3').val(), $('#q4').val(), $('#q5').val(),
+                $('#q6').val(), $('#q7').val(), $('#q8').val(), $('#q9').val(), $('#q10').val()]
+        };
+        var currentURL = window.location.origin;
+        $.post(currentURL + "/api/friends", newFriend, function(data) {
+            console.log(data);
+            $("#resultsModal").modal('toggle');
+        });
+        $.get(currentURL + "/api/match", function(data){
+            $("#matchImg").empty();
+            $("#matchText").empty();
+            $("#matchImg").attr("src", data[0].photo);
+            $("#matchText").append("<h3>" + data[0].name + ":</h3>");
+            $("#matchText").append("<h4>" + data[0].bio + "</h4>");
+            $("#modalFooterText").append("<h5><b>Contact your new friend now! Email: " + data[0].email + "</b></h5>");
+        })
+        return false;
+    });
+</script>
+</body>
+</html>
